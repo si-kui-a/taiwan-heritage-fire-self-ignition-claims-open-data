@@ -1,0 +1,29 @@
+name: 統計檔更正
+description: 指出 exports/ 統計檔中有誤的列或變項
+title: "[統計] "
+labels: ["統計"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        統計檔由原始資料表產生，採用的更正會從原始資料修正後重新產生，不直接改統計檔。請勿在此推論特定個人或機關對任何火災的責任。
+  - type: input
+    id: file
+    attributes:
+      label: 檔案
+      description: 例如 exports/ 底下的檔名
+    validations:
+      required: true
+  - type: input
+    id: row
+    attributes:
+      label: 哪一列、哪個變項
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 正確值與依據
+      description: 附可公開查閱的原始連結
+    validations:
+      required: true

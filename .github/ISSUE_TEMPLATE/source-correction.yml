@@ -1,0 +1,38 @@
+name: 來源錯誤、過時連結或遺漏
+description: 指出 data/references.csv 的錯誤、失效連結，或建議應納入的來源
+title: "[來源] "
+labels: ["來源"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        每項回報都會先對原始連結核對後再採用。請勿在此推論特定個人或機關對任何火災的責任。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 類型
+      options:
+        - 現有來源有誤
+        - 連結失效或已改址
+        - 遺漏的來源
+    validations:
+      required: true
+  - type: input
+    id: ref_id
+    attributes:
+      label: 代號（ref_id）
+      description: 現有來源的代號，例如 P16；遺漏的來源可留空
+  - type: input
+    id: url
+    attributes:
+      label: 可公開查閱的原始連結
+      description: 原始出處（法規資料庫、DOI、機關網站等），不是轉載或摘要
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 說明
+      description: 哪個欄位錯、正確內容是什麼；遺漏的來源請寫名稱、發布者、版本或年份，以及它和本主題的關係
+    validations:
+      required: true
