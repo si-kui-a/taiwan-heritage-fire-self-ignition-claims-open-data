@@ -15,3 +15,12 @@ d$verification <- factor(d$verification, levels = c("A", "B", "C"), labels = c("
 attr(d$verification, "label") <- "查證分級"
 d$ownership <- factor(d$ownership, levels = c("公有", "私有", "不明"), labels = c("公有", "私有", "不明"))
 attr(d$ownership, "label") <- "產權"
+d$structure <- factor(d$structure, levels = c("木造", "磚造", "石造或土造", "加強磚造", "鋼筋混凝土造", "鋼構造", "混合或不明", "待查"), labels = c("木造", "磚造", "石造或土造", "加強磚造", "鋼筋混凝土造", "鋼構造", "混合或不明", "待查"))
+attr(d$structure, "label") <- "構造材質"
+attr(d$damage_level, "label") <- "損害程度（文資法第 24 條判準）"
+d$damage_extent <- factor(d$damage_extent, levels = c("單棟", "群組中部分", "延燒多棟", "不明", "待查"), labels = c("單棟", "群組中部分", "延燒多棟", "不明", "待查"))
+attr(d$damage_extent, "label") <- "損害範圍"
+d$heritage_status <- factor(d$heritage_status, levels = c("維持", "變更類別", "廢止", "非法定", "不明", "待查"), labels = c("維持", "變更類別", "廢止", "非法定", "不明", "待查"))
+attr(d$heritage_status, "label") <- "火災後文資身分"
+d$physical_status <- factor(d$physical_status, levels = c("緊急搶修", "修復中", "修復完成", "再利用", "閒置未修", "拆除", "空地", "新建", "不明", "待查"), labels = c("緊急搶修", "修復中", "修復完成", "再利用", "閒置未修", "拆除", "空地", "新建", "不明", "待查"))
+attr(d$physical_status, "label") <- "火災後實體狀況"
